@@ -12,7 +12,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily1: {
+        nunito: ['"Nunito"', 'sans-serif'],
+        roboto: ["Roboto", 'sans-serif'],
+      },
     },
   },
   plugins: [],
 } satisfies Config;
+
