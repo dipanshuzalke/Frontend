@@ -50,9 +50,17 @@ const HowItWorks = () => {
           {steps.map((step, idx) => (
             <motion.div
               key={idx}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl "
-              whileHover={{ y: -6 }}
-              transition={{ type: "spring", stiffness: 200, damping: 15 }}
+              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: idx * 0.2,
+                type: "spring",
+                stiffness: 100,
+                damping: 12,
+              }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <div className="flex items-center mb-4">
                 <span className="flex-shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 text-white font-bold">

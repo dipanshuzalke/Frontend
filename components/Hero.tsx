@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Hero() {
   const [isScale, setIsScale] = useState(true);
@@ -19,20 +19,39 @@ export default function Hero() {
     exit: { y: -30, opacity: 0 },
   };
 
+  // Load animation for entire hero section
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
-    <div className="hero flex flex-col md:flex-row text-center pt-16 px-6 h-screen overflow-hidden">
+    <motion.div
+      className="flex flex-col md:flex-row text-center pt-16 px-6 h-screen overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(135deg, #c7e5ff 0%, #d3ffea 25%, #c0e6ff 50%, #e7f0ff 75%, #ffc9ff 100%)",
+      }}
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
       {/* TEXT BLOCK */}
-      <div className="flex flex-col gap-12 flex-1 justify-center md:items-start items-center text-left px-4 md:px-14 py-10">
+      <div className="flex flex-col md:gap-12 gap-6 flex-1 justify-center md:items-start items-center text-left px-2 md:px-14 pt-10">
         <div>
           <h1 className="text-[20vw] md:text-[10vw] font-bold font-roboto text-blue-600 leading-none">
             AI
           </h1>
           <h2 className="text-[6vw] md:text-[2.5vw] font-bold font-roboto">
-            to Launch &{' '}
+            to Launch &{" "}
             <span className="inline-block min-w-[10vw]">
               <AnimatePresence mode="wait">
                 <motion.span
-                  key={isScale ? 'scale' : 'validate'}
+                  key={isScale ? "scale" : "validate"}
                   className="inline-block"
                   variants={slideVariants}
                   initial="initial"
@@ -40,10 +59,10 @@ export default function Hero() {
                   exit="exit"
                   transition={{ duration: 0.2 }}
                 >
-                  {isScale ? 'Scale 🚀' : 'Validate'}
+                  {isScale ? "Scale 🚀" : "Validate"}
                 </motion.span>
               </AnimatePresence>
-            </span>{' '}
+            </span>{" "}
             Your Venture
             <br />
             Faster Than Ever
@@ -72,8 +91,8 @@ export default function Hero() {
           ></iframe>
         </div>
         <p className="text-md md:text-xl text-gray-500 text-center px-2 md:px-0">
-          AI builds high-converting landing pages and optimizes your ad <br />
-          performance across Google, Meta, LinkedIn, and more.
+          AI builds high-converting landing pages and optimizes <br />
+          your ad performance across Google, Meta, LinkedIn, and more.
         </p>
       </div>
 
@@ -90,6 +109,6 @@ export default function Hero() {
           );
         }
       `}</style>
-    </div>
+    </motion.div>
   );
 }

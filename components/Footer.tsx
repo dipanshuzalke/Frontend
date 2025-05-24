@@ -12,7 +12,7 @@ export default function Footer() {
       {/* Top CTA section */}
       <div className="relative z-20 flex flex-col md:flex-row gap-10 md:justify-around p-10 md:pt-20">
         <div className="flex flex-col gap-6 md:text-left">
-          <h1 className="text-5xl md:text-7xl font-roboto leading-tight">
+          <h1 className="text-4xl md:text-7xl font-roboto leading-tight">
             LET&apos;S MAKE IT
             <br /> HAPPEN NOW
           </h1>

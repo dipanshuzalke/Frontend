@@ -48,10 +48,8 @@ export default function ContinuousCarousel() {
 
   return (
     <div className="py-8 bg-white" id="success-stories">
-      <div
-        className="flex flex-col gap-4 justify-center items-center"
-      >
-        <h1 className="text-3xl md:text-4xl font-semibold text-gray-800">
+      <div className="flex flex-col gap-4 justify-center items-center">
+        <h1 className="text-3xl md:text-4xl text-center font-semibold text-gray-800">
           Built for early-stage startups
         </h1>
         <p className="text-gray-600 leading-relaxed text-center">
