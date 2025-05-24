@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="relative z-20 flex justify-around p-20">
         <div className="flex flex-col gap-5">
           <h1 className="text-7xl font-small font-roboto leading-tight">
-            LET'S MAKE IT
+            LET&apos;S MAKE IT
             <br /> HAPPEN NOW
           </h1>
           <div className="flex gap-3">
