@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
 
 const steps = [
@@ -30,10 +30,10 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="bg-gray-50 py-28 ">
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 " />
-        <div className="relative max-w-4xl mx-auto px-6 pb-20 text-center">
+    <section className="bg-gray-50 py-10" id="how-it-works">
+      {/* <div className="relative overflow-hidden"> */}
+        {/* <div className="absolute inset-0 " /> */}
+        <div className="relative max-w-4xl mx-auto px-6 py-6 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
             From idea to clarity in just{" "}
             <span className="text-blue-600">14 days</span>
@@ -42,10 +42,10 @@ const HowItWorks = () => {
             Bridging the gap between slow, expensive agencies and complex
             self-serve tools.
           </p>
-        </div>
+        {/* </div> */}
       </div>
 
-      <div className="max-w-6xl mx-auto pb-16 px-6">
+      <div className="max-w-6xl mx-auto py-4 px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, idx) => (
             <motion.div

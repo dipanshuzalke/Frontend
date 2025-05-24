@@ -27,7 +27,7 @@ export default function FAQSection() {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="bg-gray-50 py-16 px-6">
+    <section className="bg-gray-50 py-10 px-6">
       {/* Intro */}
       <div className="max-w-3xl mx-auto text-center mb-12">
         <FiHelpCircle className="w-12 h-12 mx-auto text-gradient-to-r from-blue-500 to-purple-500" />

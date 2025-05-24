@@ -4,6 +4,7 @@ import Work from "@/components/Work";
 import Footer from "@/components/Footer";
 import FAQSection from "@/components/FAQQuestions";
 import ContinuousCarousel from "@/components/Testimonial";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Work />
       <ContinuousCarousel />
       <FAQSection />
+      <Contact />
       <Footer />
     </>
   );

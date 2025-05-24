@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Hero() {
   const [isScale, setIsScale] = useState(true);
@@ -20,18 +20,19 @@ export default function Hero() {
   };
 
   return (
-    <div className="hero text-center p-6 flex flex-row">
-      <div className="flex flex-col gap-20 flex-1 pb-20 h-full justify-center pl-14">
+    <div className="hero flex flex-col md:flex-row text-center pt-16 px-6 h-screen overflow-hidden">
+      {/* TEXT BLOCK */}
+      <div className="flex flex-col gap-12 flex-1 justify-center md:items-start items-center text-left px-4 md:px-14 py-10">
         <div>
-          <h1 className="text-[15.8vw] font-bold font-roboto text-left h-[20vw] text-blue-600">
+          <h1 className="text-[20vw] md:text-[10vw] font-bold font-roboto text-blue-600 leading-none">
             AI
           </h1>
-          <h1 className="text-[2.8vw] font-bold font-roboto text-left">
-            to Launch &{" "}
+          <h2 className="text-[6vw] md:text-[2.5vw] font-bold font-roboto">
+            to Launch &{' '}
             <span className="inline-block min-w-[10vw]">
               <AnimatePresence mode="wait">
                 <motion.span
-                  key={isScale ? "scale" : "validate"}
+                  key={isScale ? 'scale' : 'validate'}
                   className="inline-block"
                   variants={slideVariants}
                   initial="initial"
@@ -39,38 +40,38 @@ export default function Hero() {
                   exit="exit"
                   transition={{ duration: 0.2 }}
                 >
-                  {isScale ? "Scale 🚀" : "Validate"}
+                  {isScale ? 'Scale 🚀' : 'Validate'}
                 </motion.span>
               </AnimatePresence>
-            </span>{" "}
+            </span>{' '}
             Your Venture
             <br />
             Faster Than Ever
-          </h1>
+          </h2>
         </div>
 
-        <div className="flex gap-5">
-          <button className="px-10 py-4 border border-gray-300 rounded-full">
+        <div className="flex flex-col md:flex-row gap-4">
+          <button className="px-8 py-3 border border-gray-300 rounded-full">
             Success Stories
           </button>
-          <button className="px-10 py-4 text-white bg-blue-500 rounded-full">
+          <button className="px-8 py-3 text-white bg-blue-500 rounded-full">
             Book Demo Now
           </button>
         </div>
       </div>
 
-      <div className="flex flex-col gap-10 flex-1 pt-14 h-full justify-center items-center">
-        <div className="relative w-[80%] rounded-3xl aspect-video overflow-hidden">
+      {/* VIDEO BLOCK */}
+      <div className="flex flex-col gap-8 flex-1 justify-center items-center py-6 px-4">
+        <div className="relative w-full max-w-[600px] aspect-video overflow-hidden rounded-3xl">
           <iframe
             src="https://www.youtube-nocookie.com/embed/nU3FkrwMKU8?rel=0&modestbranding=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="absolute top-0 left-0 w-full h-full rounded-xl"
+            className="absolute top-0 left-0 w-full h-full"
           ></iframe>
         </div>
-
-        <p className="text-xl text-gray-500 text-center">
+        <p className="text-md md:text-xl text-gray-500 text-center px-2 md:px-0">
           AI builds high-converting landing pages and optimizes your ad <br />
           performance across Google, Meta, LinkedIn, and more.
         </p>
@@ -79,7 +80,6 @@ export default function Hero() {
       <style jsx>{`
         .hero {
           width: 100vw;
-          height: 100vh;
           background: linear-gradient(
             135deg,
             #c7e5ff 0%,
